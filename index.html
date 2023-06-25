@@ -1,73 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./style.css" />
+		<title>Expenses chart component</title>
+		<link rel="stylesheet" href="style.css" />
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+			integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script defer src="./script.js"></script>
+	</head>
+	<body>
+		<main>
+			<section class="container">
+				<div class="balance-card">
+					<div class="header">
+						<div class="balance">
+							<div class="balance__label | fs-small fc-light">My balance</div>
+							<div class="balance__amount | fw-bold fs-medium fc-light">$921.48</div>
+						</div>
+						<div class="illustration">
+							<img src="./images/logo.svg" alt="logo circles" />
+						</div>
+					</div>
 
-    <title>Frontend Mentor | Expenses chart component</title>
-    <script src="./script.js" defer></script>
-  </head>
-  <body>
-    <main>
-      <section class="expense">
-        <div class="expense__container">
-          <div class="expense__balance">
-            <div>
-              <p>My balance</p>
-              <span>$921.48</span>
-            </div>
-            <img src="./images/logo.svg" alt="circle" />
-          </div>
-          <div class="expense__chart-container">
-            <h1 class="expense__chart-title">Spending - Last 7 days</h1>
-
-            <div class="svg-chart"></div>
-            <div class="expense__total">
-              <div class="expense__total-thisMonth">
-                <p>Total this month</p>
-                <span> $478.33</span>
-              </div>
-              <div class="expense__total-lastMonth">
-                <span>+2.4%</span>
-                <p>from last month</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://www.frontendmentor.io/profile/talentlessDeveloper"
-        >Kareem</a
-      >.
-    </footer>
-
-    <!-- <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.6.1/d3.min.js"
-      integrity="sha512-MefNfAGJ/pEy89xLOFs3V6pYPs6AmUhXJrRlydI/9wZuGrqxmrdQ80zKHUcyadAcpH67teDZcBeS6oMJLPtTqw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script> -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-  </body>
+					<div class="info">
+						<div class="title | fs-medium fw-bold">Spending - Last 7 days</div>
+						<div class="chart" data-chart></div>
+						<div class="monthly">
+							<div class="monthly__total">
+								<div class="monthly__total-label | fs-small fc-medium">Total this month</div>
+								<div class="monthly__total-amount | fw-bold fs-large">$478.33</div>
+							</div>
+							<div class="monthly__percentage">
+								<div class="monthly__percentage-number | fs-small fw-bold">+2.4%</div>
+								<div class="monthly__percentage-label | fs-small fc-medium">from last month</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
 </html>
